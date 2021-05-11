@@ -1,4 +1,4 @@
-{# This structure macro runs first, before the schema & alias #}
+{# This DBT override macro runs first, before the schema & alias #}
 {% macro generate_database_name(custom_database_name=none, node=none) -%}
   {%- if custom_database_name is none -%}
     {%- if node.fqn|length < 4 -%}
